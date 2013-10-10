@@ -1,5 +1,6 @@
 class clamav(
-  $cron_options = hiera('clamav::cron_options', {})
+  $cron_options = hiera('clamav::cron_options', {}),
+  $database_mirror = hiera('clamav::database_mirror', 'db.us.clamav.net')
 ) inherits clamav::params {
 
   package { $package: ensure => installed, }
