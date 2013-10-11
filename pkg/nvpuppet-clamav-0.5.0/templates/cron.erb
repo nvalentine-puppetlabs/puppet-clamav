@@ -1,0 +1,4 @@
+MAILTO=<%= @cron_mailto %>
+SHELL=/bin/sh
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+<%= @cron_timespec %> root <%= @scan_command_real %> 

@@ -1,0 +1,28 @@
+{
+  "name": "nvpuppet-clamav",
+  "version": "0.5.0",
+  "source": "git://github.com/nvalentine-puppetlabs/puppet-clamav",
+  "author": "Nathan Valentine - nathan@puppetlabs.com|nrvale0@gmail.com",
+  "license": "Apache Version 2.0",
+  "summary": "ClamAV module for RedHat",
+  "description": "ClamAV module for RedHat",
+  "project_page": "http://github.com/nvalentine-puppetlabs/puppet-clamav",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "4.1.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "e6fa86aa11bba64fc037b256f4311d35",
+    "README.md": "710e3cdd9b28ba4bdb33cdba1995de2a",
+    "manifests/init.pp": "3e06976b0ce0e065e3ab96affb5c3c4c",
+    "manifests/params.pp": "4c8e04cb97b00afa9f3d33b439232c8a",
+    "templates/cron.erb": "06b87df38be2456ba0abb34efda28e28",
+    "templates/freshclam.conf.erb": "73469db88a1c741ffd78bcc92aa39136",
+    "tests/init.pp": "bd989e49b772dbedf7211ef2213f1f5e"
+  }
+}
