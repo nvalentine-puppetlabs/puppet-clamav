@@ -1,7 +1,7 @@
 class clamav(
   $cron_options = hiera('clamav::cron_options', {}),
   $database_mirror = hiera('clamav::database_mirror', 'db.us.clamav.net'),
-  $install_options = hiera('clamav::install_options', '')
+  $install_options = hiera('clamav::install_options', {})
 ) inherits clamav::params {
 
   package { $package: 
@@ -18,7 +18,7 @@ class clamav(
     require => Package[$package],
   }
 
-  if $cron_options {
+  if {} != $cron_options {
     validate_hash($cron_options)
     $cron_defaults = { user => 'root', ensure => 'present', }
     create_resources('cron', $cron_options, $cron_defaults)
