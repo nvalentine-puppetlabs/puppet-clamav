@@ -3,7 +3,7 @@ class clamav(
   $scan_command = hiera('clamav::scan_command', '/usr/bin/clamscan -r -i /home /var'),
   $exclude = hiera('clamav::scan', ['/sys', '/proc']), 
   $cron_timespec = hiera('clamav::cron_timespec', '00 1 * * *'),
-  $cron_mailto = hier('clamav::cron_mailto', 'root'),
+  $cron_mailto = hiera('clamav::cron_mailto', 'root'),
   $database_mirror = hiera('clamav::database_mirror', 'db.us.clamav.net')
 
 ) inherits clamav::params {
